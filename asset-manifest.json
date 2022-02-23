@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/my-app/static/css/main.da745d6f.css",
-    "main.js": "/my-app/static/js/main.c400f9ec.js",
-    "static/media/background.jpg": "/my-app/static/media/background.df3f20aa9bdc6bf93db2.jpg",
-    "index.html": "/my-app/index.html",
-    "main.da745d6f.css.map": "/my-app/static/css/main.da745d6f.css.map",
-    "main.c400f9ec.js.map": "/my-app/static/js/main.c400f9ec.js.map"
+    "main.css": "/booklist-app/static/css/main.6dccbf8b.css",
+    "main.js": "/booklist-app/static/js/main.c400f9ec.js",
+    "static/media/background.jpg": "/booklist-app/static/media/background.df3f20aa9bdc6bf93db2.jpg",
+    "index.html": "/booklist-app/index.html",
+    "main.6dccbf8b.css.map": "/booklist-app/static/css/main.6dccbf8b.css.map",
+    "main.c400f9ec.js.map": "/booklist-app/static/js/main.c400f9ec.js.map"
   },
   "entrypoints": [
-    "static/css/main.da745d6f.css",
+    "static/css/main.6dccbf8b.css",
     "static/js/main.c400f9ec.js"
   ]
 }
