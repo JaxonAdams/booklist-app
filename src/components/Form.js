@@ -3,7 +3,7 @@ import { GlobalContext } from '../context/GlobalState';
 
 function Form() {
 
-    const [title, setTitle] = useState("");
+    const [title, setTitle] = useState((""));
     const [author, setAuthor] = useState("");
 
     const { addBook } = useContext(GlobalContext);
