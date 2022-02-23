@@ -1,28 +1,20 @@
 import React, { Component } from 'react';
+import Book from './Book';
 
-class BookList extends Component {
-    state = {  } 
-    constructor() {
-        super();
-        const bookList = [
-            {
-                id: '1',
-                title: 'The Canterbury Tales',
-                author: 'Geoffrey Chaucer'
-            },
-            {
-                id: '2',
-                title: 'Hyperion',
-                author: 'Dan Simmons'
-            }
-        ]
-    }
+function BookList(props) {
+    
+    const initialList = props.initialList
+    const newList = props.newList
 
-    render(props) { 
-        return (
-            <ul className='book-list'></ul>
-        );
-    }
+    return ( 
+        <ul className='book-list'>
+            <Book id={initialList[0].id} title={initialList[0].title} author={initialList[0].author} />
+            <Book id={initialList[1].id} title={initialList[1].title} author={initialList[1].author} />
+            {newList.map((book) => (
+                <li  className='book' key={book.id}>{book.title}, by {book.author}</li>
+            ))}
+        </ul>
+    );
 }
- 
+
 export default BookList;
