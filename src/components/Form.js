@@ -1,14 +1,32 @@
-import React, { Component } from 'react';
+import React, { Component, useState, useContext } from 'react';
+import { GlobalContext } from '../context/GlobalState';
 
-function Form(props) {
+function Form() {
+
+    const [title, setTitle] = useState("");
+    const [author, setAuthor] = useState("");
+
+    const { addBook } = useContext(GlobalContext);
+
+    const onSubmit = function(event) {
+        event.preventDefault();
+
+        const newBook = {
+            id: Math.floor(Math.random() * 100000000),
+            title,
+            author
+        }
+
+        addBook(newBook);
+    }
 
     return ( 
-        <form className='form'>
+        <form className='form' onSubmit={onSubmit}>
             <div className='input-container'>
-                <input type='text' placeholder='Book Title' className='input-title' onChange={props.titleInputHandler}></input>
-                <input type='text' placeholder='Author' className='input-author' onChange={props.authorInputHandler}></input>
+                <input type='text' value={title} placeholder='Book Title' onChange={(e) => {setTitle(e.target.value)}} className='input-title'></input>
+                <input type='text' value={author} placeholder='Author' onChange={(e) => {setAuthor(e.target.value)}} className='input-author'></input>
             </div>
-            <button className='submit-btn' onClick={props.submitHandler}>Submit</button>
+            <button type='submit' className='submit-btn'>Submit</button>
         </form>
     );
 }

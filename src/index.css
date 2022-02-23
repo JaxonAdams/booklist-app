@@ -3,6 +3,9 @@ body {
   padding: 0;
   box-sizing: border-box;
   background-image: url('./images/background.jpg');
+  background-attachment: fixed;
+  background-position: center;
+  background-size: 110%;
 }
 
 .container {
@@ -65,4 +68,13 @@ body {
   margin: 0 2.5rem 1rem 0;
   padding: 8px 6px;
   border-radius: 8px;
+}
+
+.delete-btn {
+  font-style: italic;
+  color: tomato;
+  width: auto;
+  height: auto;
+  cursor: pointer;
+  font-size: 1.3rem;
 }

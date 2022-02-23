@@ -1,17 +1,14 @@
-import React, { Component } from 'react';
+import React, { Component, useContext } from 'react';
 import Book from './Book';
+import { GlobalContext } from '../context/GlobalState';
 
-function BookList(props) {
-    
-    const initialList = props.initialList
-    const newList = props.newList
+function BookList() {
+    const {books} = useContext(GlobalContext);
 
     return ( 
         <ul className='book-list'>
-            <Book id={initialList[0].id} title={initialList[0].title} author={initialList[0].author} />
-            <Book id={initialList[1].id} title={initialList[1].title} author={initialList[1].author} />
-            {newList.map((book) => (
-                <li  className='book' key={book.id}>{book.title}, by {book.author}</li>
+            {books.map(book => (
+                <Book book={book} key={book.id} />
             ))}
         </ul>
     );

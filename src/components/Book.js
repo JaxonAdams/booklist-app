@@ -1,8 +1,11 @@
-import React, { Component } from 'react';
+import React, { Component, useContext } from 'react';
+import { GlobalContext } from '../context/GlobalState';
 
-function Book(props) {
+function Book({ book }) {
+    const { deleteBook } = useContext(GlobalContext);
+
     return ( 
-        <li className='book' key={props.key}>{props.title}, by {props.author}</li>
+        <li className='book'>{book.title}, by {book.author} <br/> <button className='delete-btn' onClick={() => {deleteBook(book.id)}} >Delete Item From List</button></li>
     );
 }
 
